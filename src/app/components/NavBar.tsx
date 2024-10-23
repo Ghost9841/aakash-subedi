@@ -27,7 +27,7 @@ const CustomLink = ({href, title, className = ''}: {href: string, title: string,
 const NavBar = () => {
   return (
     <header 
-      className=' px-32 py-8 font-poppin flex items-center justify-between'>
+      className=' px-32 py-8 font-poppins flex items-center justify-between'>
       <nav>
         <CustomLink href='/' title="Home" className='mr-4'/>
         <CustomLink href='/aboutme' title="About" className='mx-4'/>
@@ -70,7 +70,7 @@ const NavBar = () => {
             ease: "easeInOut",
             times: [0, 0.2, 0.5, 0.8, 1],
             repeat: Infinity,
-            repeatDelay: 2
+            repeatDelay: 2  
             
           }}
           whileTap={{ 
@@ -78,7 +78,7 @@ const NavBar = () => {
             rotate: -360,
             borderRadius: "100%"}}
              target={"_blank"}>
-        <GithubIcon className='w-6 h-auto mx-4'/>
+        <GithubIcon className='w-6 h-auto mr-4'/>
         </motion.a>
 
         <motion.a href='https://www.linkedin.com/in/aakash-subedi-b5401b215/'
@@ -99,7 +99,7 @@ const NavBar = () => {
             rotate: -360,
             borderRadius: "100%"}}
              target={"_blank"}>
-        <LinkedInIcon className='w-6 h-auto mx-4'/>
+        <LinkedInIcon className='w-6 h-auto mr-4'/>
         </motion.a>
 
         <motion.a href='https://www.pinterest.com/GhostAakash/'
@@ -120,7 +120,7 @@ const NavBar = () => {
             rotate: -360,
             borderRadius: "100%"}}
              target={"_blank"}>
-        <PinterestIcon className='w-6 h-auto mx-4'/>
+        <PinterestIcon className='w-6 h-auto mr-4'/>
         </motion.a>
 
         <motion.a href='https://dribbble.com/ghostaakash'
@@ -141,7 +141,7 @@ const NavBar = () => {
             rotate: -360,
             borderRadius: "100%"}}
              target={"_blank"}>
-        <DribbbleIcon className='w-6 h-auto mx-4'/>
+        <DribbbleIcon className='w-6 h-auto mr-4'/>
         </motion.a>
         
       </nav>

@@ -19,7 +19,7 @@ const config: Config = {
       fontFamily:{
         sans: ['var(--font-inter)'],
         mono: ['var(--font-roboto-mono)'],
-        poppin:['var(--font-poppins'],
+        poppin:['var(--font-poppin)'],
       }
     },
   },

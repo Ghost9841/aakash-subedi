@@ -24,7 +24,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Aakash Suedbi Portfolio",
+  title: "Aakash Subedi Portfolio",
   description: "Website Portfolio of Ghost Aakash",
 };
 
@@ -40,7 +40,7 @@ export default function RootLayout({
         <link rel="icon" href="@/logo.png"/>
       </Head>
       <body
-        className={poppins.className} 
+        className={`${poppins.className} font-poppins bg-light text-dark` }
       >
         <NavBar/>
         {children}
