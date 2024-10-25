@@ -145,7 +145,7 @@ const NavBar = () => {
         </motion.a>
         
       </nav>
-      <div className='absolute left-[47.5%] top-4 '><Logo/></div>
+      <div className='absolute left-[48%] top-4 '><Logo/></div>
     </header>
   )
 }
