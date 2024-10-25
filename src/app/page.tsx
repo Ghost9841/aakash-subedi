@@ -1,9 +1,9 @@
 'use client'
 import Image from "next/image";
-import profilepic from './utilits/profile/developer-pic-1.png';
+import profilepic from '@/utilits/profile/developer-pic-1.png';
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { LinkArrow } from "./components/icons";
+import { LinkArrow } from "@/components/icons";
 
 export default function Home() {
   return (
