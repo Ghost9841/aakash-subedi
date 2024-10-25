@@ -4,6 +4,7 @@ import "./globals.css";
 import { Inter, Roboto_Mono } from 'next/font/google'
 import Head from "next/head";
 import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
  
 const inter = Inter({
   subsets: ['latin'],
@@ -44,6 +45,7 @@ export default function RootLayout({
       >
         <NavBar/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
