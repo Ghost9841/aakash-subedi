@@ -54,13 +54,13 @@ export default function Home() {
         <LinkArrow className={"w-6 ml-1"}></LinkArrow>
         </Link>
 
-        <Link href="asubedi778@gmail.com" 
+        <Link href="mailto:asubedi778@gmail.com" 
         target="_blank"
         className="ml-4 text-lg font-poppin font-medium capitalize text-dark underline"
         >
           Contact
           </Link>
-<Hireme/>
+        <Hireme/>
         </div>
       </div>
     </div>
