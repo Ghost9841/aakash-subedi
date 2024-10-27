@@ -16,7 +16,7 @@ const Footer = () => {
         <a href="https://linkedin.com/in/aakash-subedi-b5401b215/" target={'_blank'} className='underline
         underline-offset-2'>Aakash Subedi</a>
         </div>
-        <Link href="/">Send me a Hello</Link>
+        <a href="/contact">Send me a <span className=' underline underline-offset-2'>Hello</span></a>
         </span>
       </footer>
     </div>

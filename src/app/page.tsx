@@ -4,6 +4,7 @@ import profilepic from '@/utilits/profile/developer-pic-1.png';
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { LinkArrow } from "@/components/icons";
+import Hireme from "@/components/Hireme";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
         <motion.div
           whileHover={{ scale: 1.1 }}  // Scale up on hover
           transition={{ type: "spring", stiffness: 300 ,duration: 1, repeatType: "reverse"}}
-        >
+          >
         <Image  src={profilepic} alt="Aakash Pic"/>
         </motion.div>
       </div>
@@ -59,6 +60,7 @@ export default function Home() {
         >
           Contact
           </Link>
+<Hireme/>
         </div>
       </div>
     </div>

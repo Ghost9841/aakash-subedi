@@ -78,7 +78,7 @@ const NavBar = () => {
             rotate: -360,
             borderRadius: "100%"}}
              target={"_blank"}>
-        <GithubIcon className='w-6 h-auto mr-4'/>
+        <GithubIcon className='w-6 h-auto mx-4'/>
         </motion.a>
 
         <motion.a href='https://www.linkedin.com/in/aakash-subedi-b5401b215/'
@@ -99,7 +99,7 @@ const NavBar = () => {
             rotate: -360,
             borderRadius: "100%"}}
              target={"_blank"}>
-        <LinkedInIcon className='w-6 h-auto mr-4'/>
+        <LinkedInIcon className='w-6 h-auto mx-4'/>
         </motion.a>
 
         <motion.a href='https://www.pinterest.com/GhostAakash/'
@@ -120,7 +120,7 @@ const NavBar = () => {
             rotate: -360,
             borderRadius: "100%"}}
              target={"_blank"}>
-        <PinterestIcon className='w-6 h-auto mr-4'/>
+        <PinterestIcon className='w-6 h-auto mx-4'/>
         </motion.a>
 
         <motion.a href='https://dribbble.com/ghostaakash'
@@ -141,7 +141,7 @@ const NavBar = () => {
             rotate: -360,
             borderRadius: "100%"}}
              target={"_blank"}>
-        <DribbbleIcon className='w-6 h-auto mr-4'/>
+        <DribbbleIcon className='w-6 h-auto mx-4'/>
         </motion.a>
         
       </nav>
