@@ -6,7 +6,7 @@ const Footer = () => {
     <div>
       <footer className='w-full border-t-2 border-solid border-dark
       font-poppin font-medium text-lg'>
-        <span className='py-8   flex items-center  justify-between'>
+        <span className='py-8  flex items-center  justify-around'>
           {new Date().getFullYear()} &copy; All Rights Reserved.
         <div className='mr-12 font-poppin font-bold'>
           <span className='px-1 mr-1 text-primary text-2xl'>
@@ -16,7 +16,9 @@ const Footer = () => {
         <a href="https://linkedin.com/in/aakash-subedi-b5401b215/" target={'_blank'} className='underline
         underline-offset-2'>Aakash Subedi</a>
         </div>
-        <a href="/contact">Send me a <span className=' underline underline-offset-2'>Hello</span></a>
+       <div>
+         Send me a<a href='mailto:asubedi778@gmail.com'> <span className=' underline underline-offset-2'>Hello</span></a>
+        </div>
         </span>
       </footer>
     </div>
