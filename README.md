@@ -1,8 +1,18 @@
-#New NextJS PortFolio Website of Aakash Subedi
+# New Next.js Portfolio Website of Aakash Subedi
 
-<h1>This project is done with the nextjs, tailwindcss, eslint, javascript,framer motion etc.</h1>
-<br>
-This is solely done by Aakash Subedi.<br>
-<br>
+This project is built using Next.js, Tailwind CSS, ESLint, JavaScript, Framer Motion, and more.
 
-<i>Note: The commits done by Asis423 is done by Ghost9841  (Having the same laptop the gmail was changed and I (Ghost9841) didnt knew it.</i>
+**Creator**: Aakash Subedi
+
+> Note: Commits by Asis423 were made by Ghost9841. The same laptop was used, and the Gmail was changed without knowledge of this account.
+
+## Introduction
+Hey there 👋! If you want to stand out in the crowded job market, you need a visually stunning portfolio. In this project, I’ll guide you through creating one using Next.js, Tailwind CSS, and Framer Motion.
+
+## Features
+- **Next.js** for fast performance
+- **Tailwind CSS** for styling
+- **Framer Motion** for animations
+- Optimization tips including image optimization, Google Fonts, and dark mode implementation
+
+By the end of this project, you’ll have all the knowledge needed to build a professional-grade portfolio that truly showcases your skills!
