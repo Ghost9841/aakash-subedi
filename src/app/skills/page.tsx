@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { motion } from "framer-motion";
+import Experience from './Experience';
 
 interface SkillProps {
   name: string;
@@ -35,20 +36,17 @@ const skills = () => {
             </motion.div>
           <Skill name = "HTML" x="-25vw" y="2vw"/>
           <Skill name = "CSS" x="-5vw" y="-9vw"/>
-
           <Skill name = "Javascript" x="20vw" y="7vw"/>
           <Skill name = "ReactJS" x="0vw" y="12vw"/>
-          <Skill name = "NextJS" x="-20vw" y="-15vw"/>
           <Skill name = "Python" x="15vw" y="-13vw"/>
           <Skill name = "Figma" x="0vw" y="-21vw"/>
           <Skill name = "MySQL" x="-25vw" y="18vw"/>
           <Skill name = "Tailwind CSS" x="18vw" y="19vw"/>
+          <Skill name = "NextJS" x="-20vw" y="-15vw"/>
         </div>
-
-        
-     
-
-    </div>
+            <Experience/>
+      </div>
+      
   )
 }
 
