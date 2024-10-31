@@ -29,7 +29,7 @@ const Details = ({position,company,time,address,work}:DetailsProps) =>{
     </motion.div>
   </li>
 }
-const Experience = () => {
+const Education = () => {
   const ref = useRef(null);
   const {scrollYProgress} = useScroll(
     {
@@ -106,4 +106,4 @@ const Experience = () => {
   )
 }
 
-export default Experience;
+export default Education;

@@ -2,6 +2,7 @@
 import React from 'react'
 import { motion } from "framer-motion";
 import Experience from './Experience';
+import Education from './Education';
 
 interface SkillProps {
   name: string;
@@ -45,6 +46,7 @@ const skills = () => {
           <Skill name = "NextJS" x="-20vw" y="-15vw"/>
         </div>
             <Experience/>
+            <Education/>
       </div>
       
   )
