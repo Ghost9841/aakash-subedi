@@ -5,12 +5,14 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { LinkArrow } from "@/components/icons";
 import Hireme from "@/components/Hireme";
+import TransitionEffect from "@/components/TransitionEffect";
 
 
 export default function Home() {
   return (
     <div className="w-full flex items-center text-dark min-h-screen dark:text-light 
-    xl:!text-5xl">
+   ">
+      <TransitionEffect/>
       <div className="flex-shrink-0 w-1/2 h-full pt-0 p-32 flex items-center justify-center dark:text-light xl:!text-5xl lg:text-center 
       lg:text-6xl">
         <motion.div

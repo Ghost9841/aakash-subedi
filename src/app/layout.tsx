@@ -6,6 +6,7 @@ import Head from "next/head";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import Script from "next/script";
+import TransitionEffect from "@/components/TransitionEffect";
  
 const inter = Inter({
   subsets: ['latin'],
@@ -38,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="w-full min-h-screen">
       <Head >
+        <TransitionEffect/>
       <Script id="theme-switcher" strategy="beforeInteractive">
         {`document.documentElement.classList.toggle(
   'dark',

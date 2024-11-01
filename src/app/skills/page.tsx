@@ -3,6 +3,7 @@ import React from 'react'
 import { motion } from "framer-motion";
 import Experience from './Experience';
 import Education from './Education';
+import TransitionEffect from '@/components/TransitionEffect';
 
 interface SkillProps {
   name: string;
@@ -29,6 +30,7 @@ const skills = () => {
       <div className="text-7xl font-poppin justify-center flex font-semibold pt-8 my-2 dark:text-light">
         Skills
         </div>
+        <TransitionEffect/>
         <div className="w-full h-screen relative flex items-center justify-center bg-circularLight rounded-full dark:bg-circularDark">
           <motion.div className="flex items-center justify-center rounded-full font-semibold 
           font-poppin bg-dark text-light p-8 shadow-dark cursor-pointer dark:text-dark dark:bg-light"

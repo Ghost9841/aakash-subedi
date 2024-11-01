@@ -7,6 +7,7 @@ import { GithubIcon } from '@/components/icons';
 import featuredproject from '../../utilits/aakashportfolio.png';
 import bazarproducts from '../../utilits/bazzar products.png'
 import paisaminer from '../../utilits/paisaminer.png'
+import TransitionEffect from '@/components/TransitionEffect';
 
 interface FeaturedProjectProps {
   type: string;
@@ -84,6 +85,7 @@ const SideProject = ({ title, type, img, link, github }: SideProjectProps) => {
 const Projects = () => {
   return (
     <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
+      <TransitionEffect/>
       <motion.div
         className="text-7xl font-bold mb-16 capitalize justify-center items-center pt-16 flex flex-col w-full dark:text-light"
         initial={{ opacity: 0, y: -20 }}

@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import { motion, useInView, useMotionValue, useSpring } from 'framer-motion';
 import assets from '@/components/assets';
 import Image from 'next/image';
+import TransitionEffect from '@/components/TransitionEffect';
 
 interface AnimatedNumbersProps {
   value: number;
@@ -42,8 +43,8 @@ const AboutME = () => {
         <meta name="description" content="A portfolio showcasing the skills and projects of Aakash Subedi." />
       </Head>
       
+        <TransitionEffect/>
       <main className="flex flex-col items-center py-12 px-6 md:px-20 space-y-6 md:space-y-12 dark:text-light">
-        
        
         <motion.div 
           className="text-6xl font-bold mb-6 capitalize justify-center items-center pt-1 flex flex-col w-full"
