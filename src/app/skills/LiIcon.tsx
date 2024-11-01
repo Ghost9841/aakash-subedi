@@ -1,6 +1,6 @@
 'use client'
 import { motion,useScroll } from "framer-motion";
-import React, { useRef } from 'react';
+import React from 'react';
 
 interface LiIconProps{
   reference: React.RefObject<HTMLLIElement>;

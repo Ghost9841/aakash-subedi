@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation'
 import {DribbbleIcon, GithubIcon, LinkedInIcon, MoonIcon, PinterestIcon, SunIcon, TwitterIcon,} from './icons'
 import {motion} from 'framer-motion'
 import useThemeSwitcher from './useThemeSwitcher'
-import { useRouter } from 'next/router'
 
 
 const CustomLink = ({href, title, className = ''}: {href: string, title: string, className?: string})=>{

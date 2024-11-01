@@ -66,9 +66,9 @@ const AboutME = () => {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-xl font-poppin  text-dark/90 uppercase mb-4 font-bold dark:text-light">About Me</h2>
-           <p className="text-justify font-poppin">Hello! I'm Aakash Subedi – a developer, designer, and tech enthusiast passionate about building impactful digital experiences. With expertise in web development, UI/UX design, and cybersecurity, I’m dedicated to creating seamless, user-centered solutions that solve real-world challenges.</p>
-           <p className="text-justify">From e-commerce to disaster management and game projects, I approach every task with innovation and a focus on usability. Let’s collaborate to bring fresh perspectives and make a difference together!</p> 
-           <footer>Let's create something exceptional together!</footer>
+           <p className="text-justify font-poppin">Hello! I&apos;m Aakash Subedi - a developer, designer, and tech enthusiast passionate about building impactful digital experiences. With expertise in web development, UI/UX design, and cybersecurity, I&apos;m dedicated to creating seamless, user-centered solutions that solve real-world challenges.</p>
+           <p className="text-justify">From e-commerce to disaster management and game projects, I approach every task with innovation and a focus on usability. Let&apos;s collaborate to bring fresh perspectives and make a difference together!</p> 
+           <footer>Let&apos;s create something exceptional together!</footer>
           </motion.div>
 
           <motion.div className='flex-1 w-full md:w-auto mt-6 md:mt-0'
