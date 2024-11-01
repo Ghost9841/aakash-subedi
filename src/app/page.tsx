@@ -9,8 +9,10 @@ import Hireme from "@/components/Hireme";
 
 export default function Home() {
   return (
-    <div className="w-full flex items-center text-dark min-h-screen dark:text-light">
-      <div className="flex-shrink-0 w-1/2 h-full pt-0 p-32 flex items-center justify-center dark:text-light">
+    <div className="w-full flex items-center text-dark min-h-screen dark:text-light 
+    xl:!text-5xl">
+      <div className="flex-shrink-0 w-1/2 h-full pt-0 p-32 flex items-center justify-center dark:text-light xl:!text-5xl lg:text-center 
+      lg:text-6xl">
         <motion.div
           whileHover={{ scale: 1.1 }}  // Scale up on hover
           transition={{ type: "spring", stiffness: 300 ,duration: 1, repeatType: "reverse"}}
