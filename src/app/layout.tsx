@@ -5,6 +5,7 @@ import { Inter, Roboto_Mono } from 'next/font/google'
 import Head from "next/head";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import Script from "next/script";
  
 const inter = Inter({
   subsets: ['latin'],
@@ -35,13 +36,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-light w-full min-h-screen">
-      <Head>
+    <html lang="en" className="w-full min-h-screen">
+      <Head >
+      <Script id="theme-switcher" strategy="beforeInteractive">
+        {`document.documentElement.classList.toggle(
+  'dark',
+  localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+)`}
+      </Script>
         <meta name="viewport" content="width-device-width, initial-scale=1 "/>
         <link rel="icon" href="@/logo.png"/>
       </Head>
       <body
-        className={`${poppins.className} font-poppins bg-light text-dark` }
+        className={`${poppins.className} font-poppins bg-light text-dark dark:bg-dark` }
       >
         <NavBar/>
         {children}

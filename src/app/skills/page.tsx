@@ -14,7 +14,7 @@ interface SkillProps {
 const Skill = ({name, x, y}:SkillProps) => {
   return(
     <motion.div className="flex items-center justify-center rounded-full font-semibold 
-    font-poppin bg-dark text-light py-3 px-6 shadow-dark cursor-pointer absolute"
+    font-poppin bg-dark text-light py-3 px-6 shadow-dark cursor-pointer absolute dark:text-dark dark:bg-light" 
     whileHover={{scale:1.05}}
     initial={{x:0,y:0}}
     whileInView={{x:x,y:y}}
@@ -26,12 +26,12 @@ const Skill = ({name, x, y}:SkillProps) => {
 const skills = () => {
   return (
     <div>
-      <div className="text-7xl font-poppin justify-center flex font-semibold pt-8 my-2">
+      <div className="text-7xl font-poppin justify-center flex font-semibold pt-8 my-2 dark:text-light">
         Skills
         </div>
-        <div className="w-full h-screen relative flex items-center justify-center bg-circularLight rounded-full">
+        <div className="w-full h-screen relative flex items-center justify-center bg-circularLight rounded-full dark:bg-circularDark">
           <motion.div className="flex items-center justify-center rounded-full font-semibold 
-          font-poppin bg-dark text-light p-8 shadow-dark cursor-pointer"
+          font-poppin bg-dark text-light p-8 shadow-dark cursor-pointer dark:text-dark dark:bg-light"
           whileHover={{scale:1.05}}>
             Web
             </motion.div>

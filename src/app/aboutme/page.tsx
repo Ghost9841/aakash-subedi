@@ -42,7 +42,7 @@ const AboutME = () => {
         <meta name="description" content="A portfolio showcasing the skills and projects of Aakash Subedi." />
       </Head>
       
-      <main className="flex flex-col items-center py-12 px-6 md:px-20 space-y-6 md:space-y-12">
+      <main className="flex flex-col items-center py-12 px-6 md:px-20 space-y-6 md:space-y-12 dark:text-light">
         
        
         <motion.div 
@@ -55,7 +55,7 @@ const AboutME = () => {
         </motion.div>
 
        
-        <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-12 w-full max-w-6xl">
+        <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-12 w-full max-w-6xl dark:text-light/90">
           
        
           <motion.div 
@@ -64,7 +64,7 @@ const AboutME = () => {
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-xl font-poppin  text-dark/90 uppercase mb-4 font-bold">About Me</h2>
+            <h2 className="text-xl font-poppin  text-dark/90 uppercase mb-4 font-bold dark:text-light">About Me</h2>
            <p className="text-justify font-poppin">Hello! I'm Aakash Subedi – a developer, designer, and tech enthusiast passionate about building impactful digital experiences. With expertise in web development, UI/UX design, and cybersecurity, I’m dedicated to creating seamless, user-centered solutions that solve real-world challenges.</p>
            <p className="text-justify">From e-commerce to disaster management and game projects, I approach every task with innovation and a focus on usability. Let’s collaborate to bring fresh perspectives and make a difference together!</p> 
            <footer>Let's create something exceptional together!</footer>
@@ -82,7 +82,7 @@ const AboutME = () => {
               src={assets.aboutmepfp} 
               
               alt="Profile Picture of Aakash Subedi"
-              className="w-full h-auto object-cover rounded-lg shadow-lg"
+              className="w-full h-auto object-cover rounded-lg shadow-lg dark:bg-light hover:dark:border-2"
               />
           </div>
               </motion.div>
@@ -95,21 +95,21 @@ const AboutME = () => {
               <span className="inline-block text-5xl md:text-7xl font-bold">
                 <AnimatedNumbers value={11}/>+
               </span>
-              <h2 className="text-lg md:text-xl font-medium capitalize text-dark/90">Projects done</h2>
+              <h2 className="text-lg md:text-xl font-medium capitalize text-dark/90 dark:text-light">Projects done</h2>
             </div>
 
             <div className="flex flex-col items-center md:items-end justify-center">
               <span className="inline-block text-5xl md:text-7xl font-bold">
                 <AnimatedNumbers value={1}/>+
               </span>
-              <h2 className="text-lg md:text-xl font-medium capitalize text-dark/90">Years of experience</h2>
+              <h2 className="text-lg md:text-xl font-medium capitalize text-dark/90 dark:text-light/90">Years of experience</h2>
             </div>
 
-            <div className="flex flex-col items-center md:items-end justify-center">
+            <div className="flex flex-col items-center md:items-end justify-center dark:text-light/90">
               <span className="inline-block text-5xl md:text-7xl font-bold">
                 <AnimatedNumbers value={10}/>+
               </span>
-              <h2 className="text-lg md:text-xl font-medium capitalize text-dark/90">Programming Languages</h2>
+              <h2 className="text-lg md:text-xl font-medium capitalize text-dark/90 dark:text-light/90">Programming Languages</h2>
             </div>
           
           </div>

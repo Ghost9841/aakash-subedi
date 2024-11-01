@@ -9,10 +9,10 @@ import {motion} from "framer-motion";
 const Logo = () => {
   return (
     <div 
-        className='flex items-center justify-center mt-2 bg-light'>
+        className='flex items-center justify-center mt-2'>
       <Link href='/'>
        <motion.img 
-       className="rounded-full bg-dark w-16 h-16 border-2 border-solid border-transparent" 
+       className="rounded-full bg-dark w-16 h-16 border-2 border-solid border-transparent dark:border-light" 
        whileHover={{
         scale: [1, 1.2, 1.5, 1, 1],
         transition:{duration:2, repeat: Infinity},

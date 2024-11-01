@@ -13,14 +13,14 @@ interface DetailsProps {
 }
 const Details = ({position,company,time,address,work}:DetailsProps) =>{
   const ref = useRef(null);
-  return <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-column items-center justify-between'>
+  return <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-column items-center justify-between dark:text-light'>
     <LiIcon reference={ref}/>
-    <motion.div className=""
+    <motion.div className="dark:text-light"
     initial={{y:50}}
     whileInView={{y:0}}
     transition={{duration:0.5,type:"spring"}}>
-      <h3 className='capitalize font-bold text-2xl'>{position}&nbsp; | {company}</h3>
-      <span className='capitalize font-medium text-dark/75 '>
+      <h3 className='capitalize font-bold text-2xl dark:text-light'>{position}&nbsp; | {company}</h3>
+      <span className='capitalize font-medium text-dark/75 dark:text-light/75'>
         {time} | {address}
       </span>
       <p className='font-medium w-full'>
@@ -38,7 +38,7 @@ const Experience = () => {
     }
   )
   return (
-    <div className='my-64'>
+    <div className='my-64 dark:text-light'>
  
       <div className="font-semibold font-poppin text-7xl mb-32 w-full text-center">
         Experience
@@ -46,9 +46,9 @@ const Experience = () => {
       <div ref={ref}className="w-[75%] mx-auto relative">
         <motion.div 
         style={{scaleY: scrollYProgress}}
-        className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top">
+        className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light">
         </motion.div>
-        <ul className="w-full flex flex-col items-start justify-between ml-4">
+        <ul className="w-full flex flex-col items-start justify-between ml-4 dark:text-light">
           
         <Details
         position = "Technician (ISP Operator)" company='JNICT' time="2023-2024" address='Thankot, Chandragiri'

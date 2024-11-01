@@ -9,8 +9,8 @@ import Hireme from "@/components/Hireme";
 
 export default function Home() {
   return (
-    <div className="w-full flex items-center text-dark min-h-screen">
-      <div className="flex-shrink-0 w-1/2 h-full pt-0 bg-light p-32 flex items-center justify-center">
+    <div className="w-full flex items-center text-dark min-h-screen dark:text-light">
+      <div className="flex-shrink-0 w-1/2 h-full pt-0 p-32 flex items-center justify-center dark:text-light">
         <motion.div
           whileHover={{ scale: 1.1 }}  // Scale up on hover
           transition={{ type: "spring", stiffness: 300 ,duration: 1, repeatType: "reverse"}}
@@ -18,7 +18,7 @@ export default function Home() {
         <Image  src={profilepic} alt="Aakash Pic"/>
         </motion.div>
       </div>
-      <div className="w-1/2 h-full flex-shrink-0 items-center justify-center pt-0 bg-light p-32">
+      <div className="w-1/2 h-full flex-shrink-0 items-center justify-center pt-0 p-32">
         <motion.div
           className="text-6xl font-bold mb-6 capitalize"
           initial={{ opacity: 0, y: -20 }} 
@@ -48,7 +48,10 @@ export default function Home() {
         target={"_blank"}
         className="flex items-center bg-dark text-light p-2.5 px-6
         rounded-lg text-lg font-poppin font-semibold hover:bg-light hover:text-dark
-        border-2 border-solid border-transparent hover:border-dark"
+        border-2 border-solid border-transparent hover:border-dark
+        dark:bg-light dark:text-dark 
+        hover:dark:bg-dark hover:dark:text-light hover:dark:border-light"
+
         download={true}
         >
            Resume
@@ -57,7 +60,7 @@ export default function Home() {
 
         <Link href="mailto:asubedi778@gmail.com" 
         target="_blank"
-        className="ml-4 text-lg font-poppin font-medium capitalize text-dark underline"
+        className="ml-4 text-lg font-poppin font-medium capitalize text-dark underline dark:text-light"
         >
           Contact
           </Link>

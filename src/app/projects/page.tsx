@@ -19,21 +19,24 @@ interface FeaturedProjectProps {
 
 const FeaturedProject = ({ type, title, summary, img, link, github }: FeaturedProjectProps) => {
   return (
-    <article className="w-full flex items-center justify-center rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12">
+    <article className="w-full flex items-center justify-center rounded-3xl border border-solid border-dark
+     bg-light shadow-2xl p-12 dark:bg-dark dark:border-light">
       <Link href={link} target="_blank" className="w-1/2 cursor-pointer overflow-hidden rounded-lg">
         <Image src={img} alt={title} className="w-full h-auto" />
       </Link>
       <div className="w-1/2 flex flex-col items-start justify-between pl-6">
-        <span className="text-primary font-medium text-xl">{type}</span>
+        <span className="text-primary dark:text-primaryDark font-medium text-xl">{type}</span>
         <Link href={link} target="_blank" className="hover:underline underline-offset-2">
-          <h2 className="my-2 w-full text-left text-4xl font-poppin font-bold">{title}</h2>
+          <h2 className="my-2 w-full text-left text-4xl font-poppin font-bold dark:text-white">{title}</h2>
         </Link>
-        <p className="my-2 font-medium font-poppin text-dark">{summary}</p>
+        <p className="my-2 font-medium font-poppin text-dark dark:text-white">{summary}</p>
         <div className="mt-2 flex items-center">
           <Link href={github} target="_blank">
-            <GithubIcon className="w-10 h-auto" />
+            <GithubIcon className="w-9 h-auto dark::border-1" />
           </Link>
-          <Link href={link} target="_blank" className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold  hover:bg-white hover:text-black drop-shadow-md">
+          <Link href={link} target="_blank" className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold
+            hover:bg-white hover:text-black drop-shadow-md border border-solid border-dark hover:border-1 dark:text-dark dark:bg-light dark:font-semibold
+            dark:hover:bg-dark dark:hover:text-white dark:hover:border-1 dark:hover:border-white">
             Visit Project
           </Link>
         </div>
@@ -52,20 +55,24 @@ interface SideProjectProps {
 
 const SideProject = ({ title, type, img, link, github }: SideProjectProps) => {
   return (
-    <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6">
+    <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid
+     border-dark bg-light p-6 dark:bg-dark dark:border-light">
       <Link href={link} target="_blank" className="w-full cursor-pointer overflow-hidden rounded-lg mb-4">
         <Image src={img} alt={title} className="w-full h-auto" />
       </Link>
       <div className="w-full flex flex-col items-start justify-between">
-        <span className="text-primary font-medium text-lg">{type}</span>
+        <span className="text-primary dark:text-primaryDark font-medium text-lg">{type}</span>
         <Link href={link} target="_blank" className="hover:underline underline-offset-2">
           <h2 className="my-2 w-full text-left text-2xl font-poppin font-bold">{title}</h2>
         </Link>
         <div className="mt-2 flex items-center">
           <Link href={github} target="_blank">
-            <GithubIcon className="w-8 h-auto" />
+            <GithubIcon className="w-9 h-auto" />
           </Link>
-          <Link href={link} target="_blank" className="ml-4 rounded-lg bg-dark text-light p-2 px-4 text-base font-semibold hover:bg-white hover:text-black drop-shadow-md">
+          <Link href={link} target="_blank" className="ml-4 rounded-lg bg-dark text-light p-2 px-4 text-base
+           font-semibold hover:bg-white hover:text-black drop-shadow-md
+           border border-solid border-dark hover:border-1 dark:text-dark dark:bg-light dark:font-semibold
+            dark:hover:bg-dark dark:hover:text-white dark:hover:border-1 dark:hover:border-white">
             Visit Project
           </Link>
         </div>
@@ -76,18 +83,18 @@ const SideProject = ({ title, type, img, link, github }: SideProjectProps) => {
 
 const Projects = () => {
   return (
-    <main className="w-full mb-16 flex flex-col items-center justify-center">
+    <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
       <motion.div
-        className="text-7xl font-bold mb-16 capitalize justify-center items-center pt-16 flex flex-col w-full"
+        className="text-7xl font-bold mb-16 capitalize justify-center items-center pt-16 flex flex-col w-full dark:text-light"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
         Creativity Unlocks Potential.
       </motion.div>
-      <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 w-full px-12">
+      <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 w-full px-12 dark:text-light">
         {/* Featured Project */}
-        <div className="lg:col-span-12">
+        <div className="lg:col-span-12 dark:text-light">
           <FeaturedProject
             title="Aakash Personal Portfolio"
             summary="This is a portfolio website of Aakash Subedi, made using NextJS, Tailwind CSS, and Framer-Motion. Showcasing interactions and personal portfolio."
@@ -113,7 +120,7 @@ const Projects = () => {
             link="https://github.com/Ghost9841"
             type="Side Project"
             img={paisaminer}
-            github="https://github.com/Ghost9841/personal-porfolio-app"
+            github="https://github.com/Ghost9841/paisa-miner"
           />
         </div>
       </div>
