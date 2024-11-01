@@ -19,7 +19,7 @@ const Details = ({position,company,time,address,work}:DetailsProps) =>{
     initial={{y:50}}
     whileInView={{y:0}}
     transition={{duration:0.5,type:"spring"}}>
-      <h3 className='capitalize font-bold text-2xl'>{position}&nbsp; @{company}</h3>
+      <h3 className='capitalize font-bold text-2xl'>{position}&nbsp; | {company}</h3>
       <span className='capitalize font-medium text-dark/75 '>
         {time} | {address}
       </span>
@@ -55,49 +55,42 @@ const Experience = () => {
         work={
           <>
           Provided technical support and maintenance <br />
-          Installed routers and internet in homes
+          Installed routers and internet in homes & Managed server of the company
           </>}
         />
         <Details
-        position = "Technician (ISP Operator)" company='JNICT' time="2023-2024" address='Thankot, Chandragiri'
+        position = "Graphic Designer" company='Design Expert' time="2021-2023" address='Bagbazar, Kathmandu'
         work={
           <>
-          Provided technical support and maintenance <br />
-          Installed routers and internet in homes
+          Collaborated clients to meet their design needs and preferences. <br />
+          Designed and formatted question papers and educational material.
           </>}
         />
         <Details
-        position = "Technician (ISP Operator)" company='JNICT' time="2023-2024" address='Thankot, Chandragiri'
+        position = "Front Desk" company='Sikaai IT' time="2024" address='Bagbazaar, Kathmandu'
         work={
           <>
-          Provided technical support and maintenance <br />
-          Installed routers and internet in homes
+          Handle client and help them to know about the company. <br />
+          Data entry of people and their informations.
           </>}
         />
         <Details
-        position = "Technician (ISP Operator)" company='JNICT' time="2023-2024" address='Thankot, Chandragiri'
+        position = "Accountant" company='Halin Newa Guthi' time="2023-2024" address='Thankot, Chandragiri'
         work={
           <>
-          Provided technical support and maintenance <br />
-          Installed routers and internet in homes
+          Compiling, analyzing,reporting & maintaining accurate financial data.<br />
+          Creating periodic reports, such as balance sheets and profit & loss statements.
           </>}
         />
         <Details
-        position = "Technician (ISP Operator)" company='JNICT' time="2023-2024" address='Thankot, Chandragiri'
+        position = "Teacher" company='Halin Newa English School' time="2023-2024" address='Thankot, Chandragiri'
         work={
           <>
-          Provided technical support and maintenance <br />
-          Installed routers and internet in homes
+          Acting as a role model for students and encouraging them. <br />
+          Organizing School Events and Performing Administrative Tasks.
           </>}
         />
-        <Details
-        position = "Technician (ISP Operator)" company='JNICT' time="2023-2024" address='Thankot, Chandragiri'
-        work={
-          <>
-          Provided technical support and maintenance <br />
-          Installed routers and internet in homes
-          </>}
-        />
+       
         
         </ul>
        

@@ -4,14 +4,14 @@ import { useScroll,motion } from "framer-motion";
 import LiIcon from './LiIcon';
 
 interface DetailsProps {
-  position: string
-  company: string 
+  type: string
+  place: string 
   time: string
-  address: string
-  work: React.ReactNode
+  info: string
+
  
 }
-const Details = ({position,company,time,address,work}:DetailsProps) =>{
+const Details = ({type, time, place, info}:DetailsProps) =>{
   const ref = useRef(null);
   return <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-column items-center justify-between'>
     <LiIcon reference={ref}/>
@@ -19,12 +19,12 @@ const Details = ({position,company,time,address,work}:DetailsProps) =>{
     initial={{y:50}}
     whileInView={{y:0}}
     transition={{duration:0.5,type:"spring"}}>
-      <h3 className='capitalize font-bold text-2xl'>{position}&nbsp; @{company}</h3>
+      <h3 className='capitalize font-bold text-2xl'>{type}&nbsp;</h3>
       <span className='capitalize font-medium text-dark/75 '>
-        {time} | {address}
+        {time} | {place}
       </span>
       <p className='font-medium w-full'>
-        {work}
+        {info}
       </p>
     </motion.div>
   </li>
@@ -41,7 +41,7 @@ const Education = () => {
     <div className='my-64'>
  
       <div className="font-semibold font-poppin text-7xl mb-32 w-full text-center">
-        Experience
+        Education
       </div>
       <div ref={ref}className="w-[75%] mx-auto relative">
         <motion.div 
@@ -51,54 +51,29 @@ const Education = () => {
         <ul className="w-full flex flex-col items-start justify-between ml-4">
           
         <Details
-        position = "Technician (ISP Operator)" company='JNICT' time="2023-2024" address='Thankot, Chandragiri'
-        work={
-          <>
-          Provided technical support and maintenance <br />
-          Installed routers and internet in homes
-          </>}
+        type='Junior College in Computer Science'
+        time='2021-2023'
+        place='Teku, Kathmandu'
+        info='Relevant courses including Computer System, Computer Architecture, Programming Languages and so on.'
         />
         <Details
-        position = "Technician (ISP Operator)" company='JNICT' time="2023-2024" address='Thankot, Chandragiri'
-        work={
-          <>
-          Provided technical support and maintenance <br />
-          Installed routers and internet in homes
-          </>}
+        type='UI/UX Designer Course'
+        time='2023-2024'
+        place='Bagbazar, Kathmandu'
+        info='Relevant courses including Figma,Web Design and so on.'
         />
         <Details
-        position = "Technician (ISP Operator)" company='JNICT' time="2023-2024" address='Thankot, Chandragiri'
-        work={
-          <>
-          Provided technical support and maintenance <br />
-          Installed routers and internet in homes
-          </>}
+        type='Python Course'
+        time='2023-2024'
+        place='Bagbazar, Kathmandu'
+        info='Relevant courses including Python, loops, variables and so on.'
         />
         <Details
-        position = "Technician (ISP Operator)" company='JNICT' time="2023-2024" address='Thankot, Chandragiri'
-        work={
-          <>
-          Provided technical support and maintenance <br />
-          Installed routers and internet in homes
-          </>}
+        type='Bachelors in BSc.(Hons.)IT'
+        time='2024-Present'
+        place='Baneshwor, Bhaktapur'
+        info='Relevant courses including Programming Languages, IT, Digital Thinking and Innovations and so on'
         />
-        <Details
-        position = "Technician (ISP Operator)" company='JNICT' time="2023-2024" address='Thankot, Chandragiri'
-        work={
-          <>
-          Provided technical support and maintenance <br />
-          Installed routers and internet in homes
-          </>}
-        />
-        <Details
-        position = "Technician (ISP Operator)" company='JNICT' time="2023-2024" address='Thankot, Chandragiri'
-        work={
-          <>
-          Provided technical support and maintenance <br />
-          Installed routers and internet in homes
-          </>}
-        />
-        
         </ul>
        
       </div>

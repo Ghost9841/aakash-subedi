@@ -38,13 +38,13 @@ const AboutME = () => {
   return (
     <div>
       <Head>
-        <title>Aakash Subedi Portfolio</title>
+        <title>Aakash Subedi About me</title>
         <meta name="description" content="A portfolio showcasing the skills and projects of Aakash Subedi." />
       </Head>
       
       <main className="flex flex-col items-center py-12 px-6 md:px-20 space-y-6 md:space-y-12">
         
-        {/* Centered Heading Section */}
+       
         <motion.div 
           className="text-6xl font-bold mb-6 capitalize justify-center items-center pt-1 flex flex-col w-full"
           initial={{ opacity: 0, y: -20 }}
@@ -54,10 +54,10 @@ const AboutME = () => {
           Driven by Passion, Guided by Innovation!
         </motion.div>
 
-        {/* Main Content Section */}
+       
         <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-12 w-full max-w-6xl">
           
-          {/* Text Section */}
+       
           <motion.div 
             className="flex-1 text-left space-y-6"
             initial={{ opacity: 0, y: -20 }} 
@@ -70,7 +70,6 @@ const AboutME = () => {
            <footer>Let's create something exceptional together!</footer>
           </motion.div>
 
-          {/* Image Section */}
           <motion.div className='flex-1 w-full md:w-auto mt-6 md:mt-0'
           initial={{ opacity: 0, y: -20 }} 
           animate={{ opacity: 1, y: 0 }} 
@@ -88,7 +87,7 @@ const AboutME = () => {
           </div>
               </motion.div>
 
-          {/* Metrics Section */}
+         
           <div className="flex flex-col items-start md:items-end md:ml-8 space-y-6 mt-8 md:mt-0">
             
 
@@ -108,7 +107,7 @@ const AboutME = () => {
 
             <div className="flex flex-col items-center md:items-end justify-center">
               <span className="inline-block text-5xl md:text-7xl font-bold">
-                <AnimatedNumbers value={5}/>+
+                <AnimatedNumbers value={10}/>+
               </span>
               <h2 className="text-lg md:text-xl font-medium capitalize text-dark/90">Programming Languages</h2>
             </div>
