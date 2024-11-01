@@ -17,5 +17,5 @@ Hey there 👋! If you want to stand out in the crowded job market, you need a v
 
 By the end of this project, you’ll have all the knowledge needed to build a professional-grade portfolio that truly showcases your skills!
 
-
+**Deployment link** : https://ghost9841.github.io/personal-porfolio-app/
 ### COMPLETED
