@@ -4,7 +4,6 @@ import profilepic from '@/utilits/profile/aakash-subedi-profile.jpg';
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { LinkArrow } from "@/components/icons";
-import Hireme from "@/components/Hireme";
 import TransitionEffect from "@/components/TransitionEffect";
 
 
@@ -17,9 +16,11 @@ export default function Home() {
       lg:text-6xl">
         <motion.div
           whileHover={{ scale: 1.1 }}  // Scale up on hover
+          whileTap={{ scale: 0.9 }}  // Scale down on tap
           transition={{ type: "spring", stiffness: 300 ,duration: 1, repeatType: "reverse"}}
+          className="rounded-lg cursor-pointer"
           >
-        <Image  src={profilepic} alt="Aakash Pic"/>
+        <Image  src={profilepic} alt="Aakash Pic" className="rounded-lg"/>
         </motion.div>
       </div>
       <div className="w-1/2 h-full flex-shrink-0 items-center justify-center pt-0 p-32">
@@ -68,7 +69,6 @@ export default function Home() {
         >
           Contact
           </Link>
-        <Hireme/>
         </div>
       </div>
     </div>

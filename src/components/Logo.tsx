@@ -10,20 +10,18 @@ const Logo = () => {
   return (
     <div 
         className='flex items-center justify-center mt-2'>
-      <Link href='/'>
+  
        <motion.img 
        className="rounded-full bg-dark w-16 h-16 border-2 border-solid border-transparent dark:border-light" 
-       whileHover={{
-        scale: [1, 1.2, 1.5, 1, 1],
-        transition:{duration:2, repeat: Infinity},
+       whileHover={{ 
+        scale: 1.2, rotate: 8,
         backgroundColor:["#121212", "rgba(131,58,180,1)","rgba(253,29,29,1)",
             "rgba(252,176,69,1)","rgba(131,58,180,1)", "#121212", ],
         }}
         whileTap={{ scale: 0.9 }}
-        
         src={assets.logoghost.src} 
         alt="Logo" /> 
-        </Link>
+
     </div>
   )
 }

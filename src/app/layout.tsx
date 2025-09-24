@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from 'next/font/google'
 import "./globals.css";
 import Head from "next/head";
-import NavBar from "@/components/NavBar";
+import NavBar from "@/components/navbar/NavBar";
 import Footer from "@/components/Footer";
 import Script from "next/script";
 import TransitionEffect from "@/components/TransitionEffect";
