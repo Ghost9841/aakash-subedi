@@ -3,11 +3,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
-import { GithubIcon } from '@/components/icons';
 import featuredproject from '../../utilits/aakashportfolio.png';
 import bazarproducts from '../../utilits/bazzar products.png'
 import paisaminer from '../../utilits/paisaminer.png'
 import TransitionEffect from '@/components/TransitionEffect';
+import { FaGithub } from 'react-icons/fa';
 
 interface FeaturedProjectProps {
   type: string;
@@ -33,7 +33,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }: FeaturedPr
         <p className="my-2 font-medium font-poppin text-dark dark:text-white">{summary}</p>
         <div className="mt-2 flex items-center">
           <Link href={github} target="_blank">
-            <GithubIcon className="w-9 h-auto dark::border-1" />
+            <FaGithub className="w-9 h-auto dark::border-1" />
           </Link>
           <Link href={link} target="_blank" className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold
             hover:bg-white hover:text-black drop-shadow-md border border-solid border-dark hover:border-1 dark:text-dark dark:bg-light dark:font-semibold
@@ -68,7 +68,7 @@ const SideProject = ({ title, type, img, link, github }: SideProjectProps) => {
         </Link>
         <div className="mt-2 flex items-center">
           <Link href={github} target="_blank">
-            <GithubIcon className="w-9 h-auto" />
+            <FaGithub className="w-9 h-auto" />
           </Link>
           <Link href={link} target="_blank" className="ml-4 rounded-lg bg-dark text-light p-2 px-4 text-base
            font-semibold hover:bg-white hover:text-black drop-shadow-md

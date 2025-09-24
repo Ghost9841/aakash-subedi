@@ -1,8 +1,6 @@
 'use client'
-import Link from 'next/link'
 import React, { useState } from 'react'
 import Logo from '../Logo'
-import { usePathname } from 'next/navigation'
 import { MoonIcon,  SunIcon,  } from '../icons'
 import { motion } from 'framer-motion'
 import useThemeSwitcher from '../useThemeSwitcher'

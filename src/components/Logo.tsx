@@ -1,5 +1,4 @@
 'use client'
-import Link from 'next/link';
 import React from 'react';
 import assets from './assets'; // Importing the assets from the .js file
 import {motion} from "framer-motion";
