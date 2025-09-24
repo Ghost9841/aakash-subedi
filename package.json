@@ -1,10 +1,10 @@
 {
-  "homepage": "http://Ghost9841.github.io/personal-portfolio-app",
-  "name": "personal-portfolio-website",
-  "version": "0.1.0",
+  "homepage": "http://Ghost9841.github.io/aakash-subedi",
+  "name": "aakash-subedi-portfolio",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
-    "deploy" : "gh-pages -d build",
+    "deploy" : "gh-pages -d .next",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

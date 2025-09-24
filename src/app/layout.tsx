@@ -18,6 +18,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Aakash Subedi Portfolio",
   description: "Website Portfolio of Ghost Aakash",
+  icons: {
+    icon: "/ghost_logo.jpeg",
+  }
 };
 
 export default function RootLayout({
@@ -29,7 +32,7 @@ export default function RootLayout({
     <html lang="en" className="w-full min-h-screen">
       <Head >
         <meta name="viewport" content="width-device-width, initial-scale=1 "/>
-        <link rel="icon" href="@/logo.png"/>
+        <link rel="icon" href="@/ghost_logo.jpeg"/>
       </Head>
       <body
         className={`${poppins.className} font-poppins bg-light text-dark dark:bg-dark` }
