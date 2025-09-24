@@ -50,6 +50,23 @@ const Experience = () => {
         </motion.div>
         <ul className="w-full flex flex-col items-start justify-between ml-4 dark:text-light">
           
+            <Details
+            position = "Junior Full Stack Developer" company='Tyakkai Solutions' time="2025-Present" address='Baluwatar, Kathmandu'
+            work={
+              <>
+             Developed full stack websites and applications with React and Expo.<br />
+              Worked as per the requirement needed for the clients website.
+              
+              </>}
+            />
+          <Details
+          position = "Frontend Developer" company='Saino Tech' time="2024-2025" address='Sunsari, Itahari'
+          work={
+            <>
+           Designed and Developed UI for SAAS Project of CRM<br />
+          Integrated API and database to the website and provided most good frotend capabilities
+            </>}
+          />
         <Details
         position = "Technician (ISP Operator)" company='JNICT' time="2023-2024" address='Thankot, Chandragiri'
         work={

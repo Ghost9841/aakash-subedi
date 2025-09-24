@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import {DribbbleIcon, GithubIcon, LinkedInIcon, MoonIcon, PinterestIcon, SunIcon, TwitterIcon,} from './icons'
 import {motion} from 'framer-motion'
 import useThemeSwitcher from './useThemeSwitcher'
+import { Facebook, FacebookIcon } from 'lucide-react'
 
 
 const CustomLink = ({href, title, className = ''}: {href: string, title: string, className?: string})=>{
@@ -173,7 +174,7 @@ const NavBar = () => {
             times: [0, 0.2, 0.5, 0.8, 1],
             repeat: Infinity,
             repeatDelay: 1
-          }}
+        }}
           whileTap={{ 
             scale: 0.9 ,
             rotate: -360,
@@ -242,14 +243,6 @@ const NavBar = () => {
           rotate: [0, 0, 360, 360, 0],
           borderRadius: ["0%", "0%", "50%", "50%", "0%"]
           }}
-          transition={{
-            duration: 2,
-            ease: "easeInOut",
-            times: [0, 0.2, 0.5, 0.8, 1],
-            repeat: Infinity,
-            repeatDelay: 2  
-            
-          }}
           whileTap={{ 
             scale: 0.9 ,
             rotate: -360,
@@ -285,19 +278,13 @@ const NavBar = () => {
           rotate: [0, 0, 360, 360, 0],
           borderRadius: ["0%", "0%", "50%", "50%", "0%"]
           }}
-          transition={{
-            duration: 2,
-            ease: "easeInOut",
-            times: [0, 0.2, 0.5, 0.8, 1],
-            repeat: Infinity,
-            repeatDelay: 1
-          }}
+
           whileTap={{ 
             scale: 0.9 ,
             rotate: -360,
             borderRadius: "100%"}}
              target={"_blank"}>
-        <PinterestIcon className='w-6 h-auto mx-4 bg-light rounded-full sm:mx-1'/>
+              <FacebookIcon className='w-6 h-auto mx-4 sm:mx-1' color="#1a5fb4" />
         </motion.a>
 
         <motion.a href='https://dribbble.com/ghostaakash'
