@@ -139,9 +139,9 @@ const Projects = () => {
 
         <div className="lg:col-span-6">
           <SideProject
-            title="Bazar Products"
+            title="Power In Web"
             link="https://github.com/Ghost9841"
-            type="E-commerce Website"
+            type="Website App"
             img={powerinweb}
             github="https://github.com/Ghost9841/powerinweb.git"
             livedemo='https://powerinweb.netlify.app/'
