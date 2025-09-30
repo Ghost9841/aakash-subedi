@@ -25,7 +25,7 @@ export default function Home() {
       </div>
       <div className="w-1/2 h-full flex-shrink-0 items-center justify-center pt-0 p-32">
         <motion.div
-          className="text-6xl font-bold mb-6 capitalize"
+          className="text-5xl font-bold mb-6 capitalize"
           initial={{ opacity: 0, y: -20 }} 
           animate={{ opacity: 1, y: 0 }} 
           transition={{ duration: 0.5 }}
