@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from 'next/font/google'
 import "./globals.css";
-import Head from "next/head";
 import NavBar from "@/components/navbar/NavBar";
 import Footer from "@/components/Footer";
 import Script from "next/script";
@@ -30,10 +29,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="w-full min-h-screen">
-      <Head >
-        <meta name="viewport" content="width-device-width, initial-scale=1 "/>
-        <link rel="icon" href="@/ghost_logo.jpeg"/>
-      </Head>
       <body
         className={`${poppins.className} font-poppins bg-light text-dark dark:bg-dark` }
       >

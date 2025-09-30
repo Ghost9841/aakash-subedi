@@ -27,7 +27,7 @@ const NavBar = () => {
   }
   return (
     <header
-      className='w-full px-32 py-8 font-poppins items-center justify-between dark:text-light relative'>
+      className='w-full px-32 py-8 font-poppins items-center justify-between dark:text-light relative border-b border-border'>
       <button className=' flex-col fixed justify-center items-center hidden lg:hidden sm:flex md:flex xs:flex' onClick={handleClick}>
         <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm  ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
         <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
