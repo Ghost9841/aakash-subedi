@@ -65,7 +65,7 @@ const NavBar = () => {
               <FaTwitter className='w-8 h-8' />
             </motion.a>
             <motion.a
-              href="https://www.linkedin.com/in/aakash-subedi-011777286/"
+              href="https://www.linkedin.com/in/aakash-subedi-b5401b215/"
               whileHover={{ scale: 1.2, rotate: 8 }}
               whileTap={{ scale: 0.9 }}
               target="_blank"
@@ -74,7 +74,7 @@ const NavBar = () => {
               <FaLinkedin className='w-8 h-8' />
             </motion.a>
             <motion.a
-              href="https://www.facebook.com/ghostaakash"
+              href="https://www.facebook.com/aakash.subedi.545/"
               whileHover={{ scale: 1.2, rotate: 8 }}
               whileTap={{ scale: 0.9 }}
               target="_blank"
@@ -83,7 +83,7 @@ const NavBar = () => {
               <FaFacebook className='w-8 h-8' />
             </motion.a>
             <motion.a
-              href="https://www.instagram.com/aakash_subedi_04/"
+              href="https://www.instagram.com/aakashsubedi8/"
               whileHover={{ scale: 1.2, rotate: 8 }}
               whileTap={{ scale: 0.9 }}
               target="_blank"
