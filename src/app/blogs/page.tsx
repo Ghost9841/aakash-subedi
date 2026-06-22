@@ -141,8 +141,7 @@ const blogPosts = [
   },
 ]
 
-const categories = ['all', ...new Set(blogPosts.map(post => post.category))]
-
+const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))]
 export default function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [searchQuery, setSearchQuery] = useState('')
