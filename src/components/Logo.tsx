@@ -1,27 +1,24 @@
 'use client'
 import React from 'react';
-import assets from './assets'; // Importing the assets from the .js file
-import {motion} from "framer-motion";
-
-
+import assets from './assets';
+import { motion } from "framer-motion";
+import Link from 'next/link';
 
 const Logo = () => {
   return (
-    <div 
-        className='flex items-center justify-center mt-2'>
-  
-       <motion.img 
-       className="rounded-full bg-dark w-16 h-16 border-2 border-solid border-transparent dark:border-light" 
-       whileHover={{ 
-        scale: 1.2, rotate: 8,
-        backgroundColor:["#121212", "rgba(131,58,180,1)","rgba(253,29,29,1)",
-            "rgba(252,176,69,1)","rgba(131,58,180,1)", "#121212", ],
+    <Link href="/" className="flex items-center justify-center">
+      <motion.img 
+        className="rounded-2xl bg-dark w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 border-2 border-solid border-transparent dark:border-light object-cover"
+        whileHover={{ 
+          scale: 1.15,
+          rotate: 8,
+          transition: { duration: 0.3 }
         }}
         whileTap={{ scale: 0.9 }}
         src={assets.logoghost.src} 
-        alt="Logo" /> 
-
-    </div>
+        alt="Aakash Subedi Logo"
+      /> 
+    </Link>
   )
 }
 

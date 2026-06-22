@@ -3,73 +3,134 @@ import Image from "next/image";
 import profilepic from '@/utilits/profile/aakash-subedi-profile.jpg';
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { LinkArrow } from "@/components/icons";
+import { Download, Mail } from "lucide-react";
 import TransitionEffect from "@/components/TransitionEffect";
-
 
 export default function Home() {
   return (
-    <div className="w-full flex items-center text-dark min-h-screen dark:text-light 
-   ">
-      <TransitionEffect/>
-      <div className="flex-shrink-0 w-1/2 h-full pt-0 p-32 flex items-center justify-center dark:text-light xl:!text-5xl lg:text-center 
-      lg:text-6xl">
-        <motion.div
-          whileHover={{ scale: 1.1 }}  // Scale up on hover
-          whileTap={{ scale: 0.9 }}  // Scale down on tap
-          transition={{ type: "spring", stiffness: 300 ,duration: 1, repeatType: "reverse"}}
-          className="rounded-lg cursor-pointer"
+    <div className="w-full min-h-screen flex items-center justify-center text-dark dark:text-light">
+      <TransitionEffect />
+
+      <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        {/* Center Section - Name and Image */}
+        <div className="flex flex-col items-center justify-center mb-8 md:mb-10">
+          {/* Name */}
+          <motion.div
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-4"
           >
-        <Image  src={profilepic} alt="Aakash Pic" className="rounded-lg"/>
-        </motion.div>
-      </div>
-      <div className="w-1/2 h-full flex-shrink-0 items-center justify-center pt-0 p-32">
-        <motion.div
-          className="text-5xl font-bold mb-6 capitalize"
-          initial={{ opacity: 0, y: -20 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.5 }}
-        >
-          Crafting Digital Experiences with Code and Creativity
-        </motion.div>
-        <motion.p 
-          className="text-lg my-6"
-          initial={{ opacity: 0, y: -20 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          I am a passionate full-stack developer focused on building dynamic web applications that elevate user experiences.
-        </motion.p>
-        <motion.p 
-          className="text-lg"
-          initial={{ opacity: 0, y: -20 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.7, delay: 0.4 }}
-        >
-          Dive into my projects and articles to see my journey and expertise in modern web technologies.
-        </motion.p>
-        <div className="flex items-center self-start mt-4">
-        <Link href="/mycv.pdf" 
-        target={"_blank"}
-        className="flex items-center bg-dark text-light p-2.5 px-6
-        rounded-lg text-lg font-poppin font-semibold hover:bg-light hover:text-dark
-        border-2 border-solid border-transparent hover:border-dark
-        dark:bg-light dark:text-dark 
-        hover:dark:bg-dark hover:dark:text-light hover:dark:border-light"
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">
+              <span className="block">Aakash</span>
+              <span className="block">Subedi</span>
+            </h1>
+          </motion.div>
 
-        download={true}
-        >
-           Resume
-        <LinkArrow className={"w-6 ml-1"}></LinkArrow>
-        </Link>
+          {/* Image */}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300, duration: 0.5 }}
+            className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-2xl overflow-hidden cursor-pointer border-4 border-dark dark:border-light shadow-2xl"
+          >
+            <Image
+              src={profilepic}
+              alt="Aakash Subedi"
+              className="w-full h-full object-cover"
+              priority
+            />
+          </motion.div>
 
-        <Link href="mailto:asubedi778@gmail.com" 
-        target="_blank"
-        className="ml-4 text-lg font-poppin font-medium capitalize text-dark underline dark:text-light"
-        >
-          Contact
-          </Link>
+          {/* Tagline */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-6 text-center"
+          >
+            <span className="inline-block px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium">
+              Designer, Developer & Technician
+            </span>
+          </motion.div>
         </div>
+
+        {/* Content Section - Single Column */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-center max-w-3xl mx-auto"
+        >
+          {/* Summary */}
+          <p className="text-base sm:text-lg md:text-xl leading-relaxed mb-6">
+            Hate and love relationship with coding. I hate it when it breaks,
+            but love it when it works. Frustrated by bugs, fueled by solutions.
+            Every error is just a lesson in disguise. Full-stack developer,
+            When I'm not coding, I'm thinking about coding.
+          </p>
+
+          {/* Experience Highlight */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+            <div className="bg-gray-100 dark:bg-gray-800/50 p-4 rounded-lg">
+              <h3 className="text-sm font-semibold uppercase tracking-wider mb-1">
+                Experience
+              </h3>
+              <p className="text-sm">
+                Junior Full Stack Developer<br />
+                <span className="text-xs opacity-70">Tyakkai Solutions • 2024-2025</span>
+              </p>
+            </div>
+            <div className="bg-gray-100 dark:bg-gray-800/50 p-4 rounded-lg">
+              <h3 className="text-sm font-semibold uppercase tracking-wider mb-1">
+                Education
+              </h3>
+              <p className="text-sm">
+                BSc Computer Science<br />
+                <span className="text-xs opacity-70">Techspire College • 2024-2027</span>
+              </p>
+            </div>
+          </div>
+
+          {/* Skills Tags */}
+          <div className="mb-6">
+            <h3 className="text-sm font-semibold opacity-70 uppercase tracking-wider mb-3">
+              Tech Stack
+            </h3>
+            <div className="flex flex-wrap justify-center gap-2">
+              {['React', 'NextJS', 'TypeScript', 'NodeJS', 'Python', 'Java', 'MongoDB', 'Supabase'].map((skill) => (
+                <span
+                  key={skill}
+                  className="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-xs font-medium"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Link
+              href="/Aakash_Subedi_CV.pdf"
+              target="_blank"
+              download={true}
+              className="flex items-center gap-2 bg-dark text-light px-4 py-2 rounded-lg text-sm font-medium hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark transition-colors duration-300 dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light"
+            >
+              <Download size={16} />
+              Resume
+            </Link>
+
+            <Link
+              href="mailto:asubedi778@gmail.com"
+              target="_blank"
+              className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-dark underline dark:text-light hover:opacity-80 transition-opacity"
+            >
+              <Mail size={16} />
+              Contact
+            </Link>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -1,22 +1,37 @@
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
-const CustomLink = ({href, title, className = ''}: {href: string, title: string, className?: string})=>{
-  const pathname = usePathname();
-  return(
-    <Link href={href} className={`${className} relative group`}>
+const CustomLink = ({
+  href,
+  title,
+  className = '',
+}: {
+  href: string
+  title: string
+  className?: string
+}) => {
+  const pathname = usePathname()
+  const isActive = pathname === href
+
+  return (
+    <Link
+      href={href}
+      className={`${className} relative group text-sm font-medium tracking-wide
+        text-dark/70 dark:text-light/60
+        hover:text-dark dark:hover:text-light
+        transition-colors duration-200`}
+    >
       {title}
-      
-      <span className={`
-       h-[1px] inline-block bg-dark w-0
-       absolute left-0 -bottom-0.5
-       group-hover:w-full transition-[width] ease-in-out duration-300 dark:bg-light
-       ${pathname === href? 'w-full' : 'w-0'}
+      <span
+        className={`
+          absolute left-0 -bottom-0.5 h-[1.5px] rounded-full
+          bg-dark dark:bg-light
+          transition-all duration-300 ease-in-out
+          ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}
         `}
-        >
-        &nbsp;</span>
+      />
     </Link>
   )
 }
 
-export default CustomLink;
+export default CustomLink

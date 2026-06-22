@@ -1,35 +1,34 @@
 'use client'
-import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 
+// Drop this once in layout.tsx (already there) — do NOT import it again in page.tsx.
+// It fires on every route change automatically because layout re-mounts children.
 const TransitionEffect = () => {
   return (
     <>
-    
-        <>
-          <motion.div className="fixed top-0 bottom-0 right-full w-screen h-screen z-30 bg-primaryDark"
-            initial={{ x: "100%", width: "100%" }}
-            animate={{ x: "0%", width: "0%" }}
-            transition={{ duration: 0.5, ease: "easeInOut" }} />
-          
-          <motion.div className="fixed top-0 bottom-0 right-full w-screen h-screen z-20 bg-primary"
-            initial={{ x: "100%", width: "100%" }}
-            animate={{ x: "0%", width: "0%" }}
-            transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }} />
-
-          <motion.div className="fixed top-0 bottom-0 right-full w-screen h-screen z-10 bg-primaryDark"
-            initial={{ x: "100%", width: "100%" }}
-            animate={{ x: "0%", width: "0%" }}
-            transition={{ duration: 1.1, ease: "easeInOut", delay: 0.4 }} />
-
-          <motion.div className="fixed top-0 bottom-0 right-full w-screen h-screen z-5 bg-light"
-            initial={{ x: "100%", width: "100%" }}
-            animate={{ x: "0%", width: "0%" }}
-            transition={{ duration: 1.4, ease: "easeInOut", delay: 0.6 }} />
-        </>
-      
+      {/* Layer 1 — fastest, dark accent */}
+      <motion.div
+        className="fixed inset-0 z-50 bg-primaryDark origin-right pointer-events-none"
+        initial={{ scaleX: 1 }}
+        animate={{ scaleX: 0 }}
+        transition={{ duration: 0.45, ease: [0.76, 0, 0.24, 1] }}
+      />
+      {/* Layer 2 — mid, primary */}
+      <motion.div
+        className="fixed inset-0 z-40 bg-primary origin-right pointer-events-none"
+        initial={{ scaleX: 1 }}
+        animate={{ scaleX: 0 }}
+        transition={{ duration: 0.55, ease: [0.76, 0, 0.24, 1], delay: 0.08 }}
+      />
+      {/* Layer 3 — slowest, light */}
+      <motion.div
+        className="fixed inset-0 z-30 bg-light dark:bg-dark origin-right pointer-events-none"
+        initial={{ scaleX: 1 }}
+        animate={{ scaleX: 0 }}
+        transition={{ duration: 0.65, ease: [0.76, 0, 0.24, 1], delay: 0.16 }}
+      />
     </>
-  );
-};
+  )
+}
 
-export default TransitionEffect;
+export default TransitionEffect
