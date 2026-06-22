@@ -9,7 +9,6 @@ import {
   FaLinkedin,
   FaFacebook,
   FaInstagram,
-  FaHeart,
 } from "react-icons/fa";
 import { Mail, ArrowUp } from 'lucide-react'
 

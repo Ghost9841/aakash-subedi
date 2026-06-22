@@ -1,7 +1,6 @@
 'use client'
 import Link from "next/link"
-import { motion } from "framer-motion"
-import { FaSearch, FaTag, FaCalendarAlt, FaClock } from 'react-icons/fa'
+import { FaSearch, FaCalendarAlt, FaClock } from 'react-icons/fa'
 import React, { useState } from "react"
 
 const blogPosts = [

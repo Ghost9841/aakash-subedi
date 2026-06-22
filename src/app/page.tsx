@@ -67,7 +67,7 @@ export default function Home() {
             Hate and love relationship with coding. I hate it when it breaks,
             but love it when it works. Frustrated by bugs, fueled by solutions.
             Every error is just a lesson in disguise. Full-stack developer,
-            When I'm not coding, I'm thinking about coding.
+            When I&apos;m not coding, I&apos;m thinking about coding.
           </p>
 
           {/* Experience Highlight */}
