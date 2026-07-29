@@ -70,7 +70,7 @@ const Education = () => {
         />
         <Details
         type='Bachelors in BSc.(Hons.)IT'
-        time='2024-Present'
+        time='2023-2026'
         place='Baneshwor, Bhaktapur'
         info='Relevant courses including Programming Languages, IT, Digital Thinking and Innovations and so on'
         />

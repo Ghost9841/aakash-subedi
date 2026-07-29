@@ -87,7 +87,7 @@ export default function Home() {
               </h3>
               <p className="text-sm">
                 BSc Computer Science<br />
-                <span className="text-xs opacity-70">Techspire College • 2024-2027</span>
+                <span className="text-xs opacity-70">Techspire College • Completed</span>
               </p>
             </div>
           </div>
