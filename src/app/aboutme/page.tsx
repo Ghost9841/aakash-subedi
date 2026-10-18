@@ -3,18 +3,19 @@ import Head from 'next/head';
 import React, { useEffect, useRef } from 'react';
 import { motion, useInView, useMotionValue, useSpring } from 'framer-motion';
 import assets from '@/components/assets';
-import Image from 'next/image';
+import profilepic from '@/utilits/profile/aakashsubediportrait_2.jpg';
 import TransitionEffect from '@/components/TransitionEffect';
-import { 
-  FaCode, 
-  FaLaptopCode, 
-  FaShieldAlt, 
+import {
+  FaCode,
+  FaLaptopCode,
+  FaShieldAlt,
   FaUserGraduate,
   FaRocket,
   FaAward,
   FaAppStore,
   FaLightbulb
 } from 'react-icons/fa';
+import HalftoneReveal from '@/components/HalftoneReveal';
 
 interface AnimatedNumbersProps {
   value: number;
@@ -53,14 +54,14 @@ const AboutME = () => {
         <title>Aakash Subedi - About Me</title>
         <meta name="description" content="Learn about Aakash Subedi, a passionate full-stack developer, designer, and tech enthusiast." />
       </Head>
-      
+
       <TransitionEffect />
-      
+
       <main className="min-h-screen py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-12 lg:px-20 dark:text-light">
         <div className="max-w-7xl mx-auto">
-          
+
           {/* Hero Title */}
-          <motion.div 
+          <motion.div
             className="text-center mb-8 sm:mb-12 md:mb-16"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -74,9 +75,9 @@ const AboutME = () => {
 
           {/* Main Content */}
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
-            
+
             {/* Left Section - About Text */}
-            <motion.div 
+            <motion.div
               className="flex-1 space-y-4 sm:space-y-6"
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -88,21 +89,21 @@ const AboutME = () => {
                   About Me
                 </h2>
               </div>
-              
+
               <p className="text-sm sm:text-base md:text-lg leading-relaxed text-justify">
-                Hello! I&apos;m <span className="font-semibold text-primary dark:text-primaryDark">Aakash Subedi</span> - 
-                a developer, designer, and tech enthusiast passionate about building 
-                impactful digital experiences. With expertise in web development, 
-                UI/UX design, and cybersecurity, I&apos;m dedicated to creating seamless, 
+                Hello! I&apos;m <span className="font-semibold text-primary dark:text-primaryDark">Aakash Subedi</span> -
+                a developer, designer, and tech enthusiast passionate about building
+                impactful digital experiences. With expertise in web development,
+                UI/UX design, and cybersecurity, I&apos;m dedicated to creating seamless,
                 user-centered solutions that solve real-world challenges.
               </p>
-              
+
               <p className="text-sm sm:text-base md:text-lg leading-relaxed text-justify">
-                From e-commerce to disaster management and game projects, I approach 
-                every task with innovation and a focus on usability. Let&apos;s collaborate 
+                From e-commerce to disaster management and game projects, I approach
+                every task with innovation and a focus on usability. Let&apos;s collaborate
                 to bring fresh perspectives and make a difference together!
               </p>
-              
+
               <div className="flex flex-wrap gap-3 pt-4">
                 <span className="px-3 py-1 bg-primary/10 dark:bg-primaryDark/10 rounded-full text-sm font-medium">
                   <FaCode className="inline mr-2" />
@@ -118,7 +119,7 @@ const AboutME = () => {
                 </span>
               </div>
 
-              <motion.blockquote 
+              <motion.blockquote
                 className="mt-6 p-4 sm:p-6 bg-gray-100 dark:bg-gray-800/50 rounded-lg border-l-4 border-primary dark:border-primaryDark italic text-sm sm:text-base"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -132,7 +133,7 @@ const AboutME = () => {
             </motion.div>
 
             {/* Center Section - Image */}
-            <motion.div 
+            <motion.div
               className="flex-1 flex items-center justify-center lg:px-4"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -140,17 +141,41 @@ const AboutME = () => {
               whileHover={{ scale: 1.02 }}
             >
               <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-full">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-primary/20 dark:border-primaryDark/20">
-                  <Image 
-                    src={assets.aboutmepfp} 
-                    alt="Profile Picture of Aakash Subedi"
-                    className="w-full h-auto object-cover"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                <div className="relative isolate rounded-2xl shadow-2xl border-4 border-primary/20 dark:border-primaryDark/20">
+                  {/* Halftone canvas */}
+                  <div className="relative z-0 w-full h-[600px] rounded-xl overflow-hidden">
+                    <HalftoneReveal
+                      src={profilepic.src}
+                      mode="mono"
+                      shape="dot"
+                      cellSize={6}
+                      angle={45}
+                      inkColor="#f4f1ea"
+                      paperColor="#120f17"
+                      revealRadius={160}
+                      dotScale={1}
+                      contrast={1.1}
+                      brightness={0}
+                      invert={false}
+                      roughness={0}
+                      misregistration={0}
+                      fit="cover"
+                      accentColor="#ff4f2a"
+                      softness={0.6}
+                      linger={1.2}
+                      reverse={false}
+                      wander={false}
+                      clickBurst
+                      intro
+                    />
+                  </div>
+
+                  {/* Decorative gradient — never intercept mouse events */}
+                  <div className="pointer-events-none absolute inset-0 z-10 rounded-xl bg-gradient-to-t from-black/20 to-transparent" />
                 </div>
+
                 {/* Decorative badge */}
-                <div className="absolute -bottom-2 -right-2 sm:-bottom-3 sm:-right-3 bg-primary dark:bg-primaryDark text-white px-3 py-1 rounded-full text-xs sm:text-sm font-bold shadow-lg">
+                <div className="absolute -bottom-2 -right-2 sm:-bottom-3 sm:-right-3 z-20 bg-primary dark:bg-primaryDark text-white px-3 py-1 rounded-full text-xs sm:text-sm font-bold shadow-lg">
                   <FaRocket className="inline mr-1" />
                   Innovator
                 </div>
@@ -158,7 +183,7 @@ const AboutME = () => {
             </motion.div>
 
             {/* Right Section - Stats */}
-            <motion.div 
+            <motion.div
               className="flex flex-row lg:flex-col justify-around lg:justify-start gap-4 sm:gap-6 lg:gap-8"
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -196,7 +221,7 @@ const AboutME = () => {
           </div>
 
           {/* Skills Section */}
-          <motion.div 
+          <motion.div
             className="mt-12 sm:mt-16 md:mt-20 pt-8 sm:pt-12 border-t border-dark/10 dark:border-light/10"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

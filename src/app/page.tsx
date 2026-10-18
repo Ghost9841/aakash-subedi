@@ -1,11 +1,13 @@
 'use client'
-import Image from "next/image";
-import profilepic from '@/utilits/profile/aakash-subedi-profile.jpg';
+import AakashSubediprofilepic from '@/utilits/profile/aakash-subedi-profile.jpg';
+import AakashSubediprofilepic2 from '@/utilits/profile/aakashsubediportrait_2.jpg';
+import AakashSubediLogo from '@/../public/ghost_logo.jpeg'
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Download, Mail } from "lucide-react";
 import TransitionEffect from "@/components/TransitionEffect";
-import HalftoneReveal from "@/components/HalftoneReveal";
+import Lanyard from "@/components/Lanyard";
 
 export default function Home() {
   return (
@@ -29,44 +31,29 @@ export default function Home() {
           </motion.div>
 
           {/* Image */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 300, duration: 0.5 }}
-            className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-2xl overflow-hidden cursor-pointer border-4 border-dark dark:border-light shadow-2xl"
-          >
-           import HalftoneReveal from './HalftoneReveal';
 
-<div style={{ width: '100%', height: '600px', position: 'relative' }}>
-  <HalftoneReveal
-    src={profilepic.src}
-    mode="mono"
-    shape="dot"
-    cellSize={6}
-    angle={45}
-    inkColor="#f4f1ea"
-    paperColor="#120f17"
-    revealRadius={160}
-    dotScale={1}
-    contrast={1.1}
-    brightness={0}
-    invert={false}
-    roughness={0}
-    misregistration={0}
-    fit="contain"
-    accentColor="#ff4f2a"
-    softness={0.6}
-    linger={1.2}
-    reverse={false}
-    wander={false}
-    clickBurst
-    intro
-/>
-</div>
+            <div style={{ width: '100%', height: '400px' }}>
 
-          </motion.div>
-
-          {/* Tagline */}
+            <Lanyard frontImage={AakashSubediprofilepic.src} backImage={AakashSubediprofilepic2.src} strapImage={AakashSubediLogo.src}
+              imageFit="cover"
+              cardColor="#ffffff"
+              orientation="portrait"
+              finish="glossy"
+              cornerRadius={0.3}
+              size={0.6}
+              anchor="center"
+              strapLength={0.5}
+              strapColor="#111111"
+              strapWidth={0.65}
+              metal="silver"
+              gravity={1}
+              damping={0.5}
+              elasticity={0.5}
+              breeze={0.5}
+              interactive
+              intro
+            />
+          </div>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

@@ -37,7 +37,7 @@ const NavBar = () => {
         </div>
 
         {/* Center Section - Logo (Desktop) / Logo (Mobile Left) */}
-        <div className="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 flex-shrink-0">
+        <div className="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 shrink-0">
           <Logo />
         </div>
 

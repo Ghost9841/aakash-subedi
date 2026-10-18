@@ -41,7 +41,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github, livedemo }: 
               hover:bg-white hover:text-black drop-shadow-md border border-solid border-dark hover:border-1 dark:text-dark dark:bg-light dark:font-semibold
               dark:hover:bg-dark dark:hover:text-white dark:hover:border-1 dark:hover:border-white transition-all duration-300">
               Live Demo
-              <LinkArrow className="w-4" />
+              <LinkArrow className="w-2 sm:w-3" />
             </Link>
           )}
         </div>
