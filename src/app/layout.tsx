@@ -6,11 +6,14 @@ import Footer from "@/components/Footer";
 import Script from "next/script";
 import TransitionEffect from "@/components/TransitionEffect";
 import { cn } from "@/lib/utils";
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
+import ClickSpark from "@/components/ClickSpark";
+import useThemeSwitcher from "@/components/useThemeSwitcher";
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'});
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 const poppins = Poppins({
-  weight: ['100','300','200','500','600','700','800','900'],
+  weight: ['100', '300', '200', '500', '600', '700', '800', '900'],
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-poppins'
@@ -66,20 +69,31 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("w-full min-h-screen", "font-sans", inter.variable)}>
       <body
-        className={`${poppins.className} font-poppins bg-light text-dark dark:bg-dark`}
+        className={`${poppins.className} font-poppins bg-light text-dark dark:bg-dark cursor-none hover:cursor-none`}
       >
-        <TransitionEffect/>
+        <TransitionEffect />
         <Script id="theme-switcher" strategy="beforeInteractive">
           {`document.documentElement.classList.toggle(
             'dark',
             localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
           )`}
         </Script>
-        <NavBar/>
+        <NavBar />
+        <SmoothCursor />
+
         <main className="min-h-screen">
-          {children}
+          <ClickSpark
+            sparkColor={'#000'}
+            shape="line"
+            sparkCount={10}
+            sparkSize={14}
+            sparkRadius={22}
+            duration={380}
+          >
+            {children}
+          </ClickSpark>
         </main>
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
