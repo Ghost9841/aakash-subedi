@@ -32,14 +32,14 @@ const FeaturedProject = ({ type, title, summary, img, link, github, livedemo }: 
             <FaGithub className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9" />
           </Link>
           <Link href={link} target="_blank" className="rounded-lg bg-dark text-light p-2 px-4 sm:px-6 text-sm sm:text-base font-semibold
-            hover:bg-white hover:text-black drop-shadow-md border border-solid border-dark hover:border-1 dark:text-dark dark:bg-light dark:font-semibold
-            dark:hover:bg-dark dark:hover:text-white dark:hover:border-1 dark:hover:border-white transition-all duration-300">
+            hover:bg-white hover:text-black drop-shadow-md border border-solid border-dark hover:border dark:text-dark dark:bg-light dark:font-semibold
+            dark:hover:bg-dark dark:hover:text-white dark:hover:border dark:hover:border-white transition-all duration-300">
             Visit Project
           </Link>
           {livedemo && (
             <Link href={livedemo} target="_blank" className="flex flex-row gap-2 rounded-lg bg-dark text-light p-2 px-4 sm:px-6 text-sm sm:text-base font-semibold
-              hover:bg-white hover:text-black drop-shadow-md border border-solid border-dark hover:border-1 dark:text-dark dark:bg-light dark:font-semibold
-              dark:hover:bg-dark dark:hover:text-white dark:hover:border-1 dark:hover:border-white transition-all duration-300">
+              hover:bg-white hover:text-black drop-shadow-md border border-solid border-dark hover:border dark:text-dark dark:bg-light dark:font-semibold
+              dark:hover:bg-dark dark:hover:text-white dark:hover:border dark:hover:border-white transition-all duration-300">
               Live Demo
               <LinkArrow className="w-2 sm:w-3" />
             </Link>

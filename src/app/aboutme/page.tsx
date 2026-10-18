@@ -2,7 +2,6 @@
 import Head from 'next/head';
 import React, { useEffect, useRef } from 'react';
 import { motion, useInView, useMotionValue, useSpring } from 'framer-motion';
-import assets from '@/components/assets';
 import profilepic from '@/utilits/profile/aakashsubediportrait_2.jpg';
 import TransitionEffect from '@/components/TransitionEffect';
 import {
@@ -143,7 +142,7 @@ const AboutME = () => {
               <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-full">
                 <div className="relative isolate rounded-2xl shadow-2xl border-4 border-primary/20 dark:border-primaryDark/20">
                   {/* Halftone canvas */}
-                  <div className="relative z-0 w-full h-[600px] rounded-xl overflow-hidden">
+                  <div className="relative z-0 w-full h-150 rounded-xl overflow-hidden">
                     <HalftoneReveal
                       src={profilepic.src}
                       mode="mono"
@@ -171,7 +170,7 @@ const AboutME = () => {
                   </div>
 
                   {/* Decorative gradient — never intercept mouse events */}
-                  <div className="pointer-events-none absolute inset-0 z-10 rounded-xl bg-gradient-to-t from-black/20 to-transparent" />
+                  <div className="pointer-events-none absolute inset-0 z-10 rounded-xl bg-linear-to-t from-black/20 to-transparent" />
                 </div>
 
                 {/* Decorative badge */}

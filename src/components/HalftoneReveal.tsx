@@ -602,8 +602,12 @@ const HalftoneReveal = ({
         probe.fillStyle = '#000000';
         probe.fillStyle = /^[0-9a-f]{3,8}$/i.test(value) ? `#${value}` : value;
         probe.fillRect(0, 0, 1, 1);
-        const [r, g, b] = probe.getImageData(0, 0, 1, 1).data;
-        rgb = [r / 255, g / 255, b / 255];
+const data = probe.getImageData(0, 0, 1, 1).data;
+const r = data[0];
+const g = data[1];
+const b = data[2];
+
+rgb = [r / 255, g / 255, b / 255];
       }
       colorCache.set(value, rgb);
       return rgb;

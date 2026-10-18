@@ -17,6 +17,8 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://aakash-subedi.com.np"),
+
   title: {
     default: "Aakash Subedi - Web Developer Portfolio",
     template: "%s | Aakash Subedi"
