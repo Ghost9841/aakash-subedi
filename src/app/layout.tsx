@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
-import { Poppins } from 'next/font/google'
+import { Poppins, Inter } from 'next/font/google'
 import "./globals.css";
 import NavBar from "@/components/navbar/NavBar";
 import Footer from "@/components/Footer";
 import Script from "next/script";
 import TransitionEffect from "@/components/TransitionEffect";
+import { cn } from "@/lib/utils";
+
+const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
 const poppins = Poppins({
   weight: ['100','300','200','500','600','700','800','900'],
@@ -59,7 +62,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="w-full min-h-screen">
+    <html lang="en" className={cn("w-full min-h-screen", "font-sans", inter.variable)}>
       <body
         className={`${poppins.className} font-poppins bg-light text-dark dark:bg-dark`}
       >
