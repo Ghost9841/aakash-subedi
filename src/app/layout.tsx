@@ -7,8 +7,7 @@ import Script from "next/script";
 import TransitionEffect from "@/components/TransitionEffect";
 import { cn } from "@/lib/utils";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
-import ClickSpark from "@/components/ClickSpark";
-import useThemeSwitcher from "@/components/useThemeSwitcher";
+import ThemeClickSpark from "@/components/ThemeClickSpark";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -82,16 +81,9 @@ export default function RootLayout({
         <SmoothCursor />
 
         <main className="min-h-screen">
-          <ClickSpark
-            sparkColor={'#000'}
-            shape="line"
-            sparkCount={10}
-            sparkSize={14}
-            sparkRadius={22}
-            duration={380}
-          >
+         <ThemeClickSpark>
             {children}
-          </ClickSpark>
+         </ThemeClickSpark>
         </main>
         <Footer />
       </body>
