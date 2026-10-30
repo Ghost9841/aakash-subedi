@@ -8,6 +8,7 @@ import TransitionEffect from "@/components/TransitionEffect";
 import { cn } from "@/lib/utils";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import ThemeClickSpark from "@/components/ThemeClickSpark";
+import SmoothScroll from "@/components/ui/SmoothScroll";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -82,7 +83,9 @@ export default function RootLayout({
 
         <main className="min-h-screen">
          <ThemeClickSpark>
+          <SmoothScroll>
             {children}
+          </SmoothScroll>
          </ThemeClickSpark>
         </main>
         <Footer />
